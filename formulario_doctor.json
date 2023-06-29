@@ -1,0 +1,9 @@
+{
+  "tipo": "doctor",
+  "nombre": "doctor",
+  "apellido": "a",
+  "cedula": "0123",
+  "correo": "correoa@gmail.com",
+  "consultorio": "32",
+  "especialidad": "Rehabilitación física"
+}

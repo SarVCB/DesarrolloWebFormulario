@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visualizador de Archivo JSON</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <h2>Visualizador de Archivo JSON</h2>
+  <input type="file" id="archivoJson" accept=".json"><br><br>
+  <div id="contenidoJson"></div>
+
+  <script>
+    $(document).ready(function() {
+      $('#archivoJson').on('change', function(e) {
+        var file = e.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          var contenido = e.target.result;
+          var json = JSON.parse(contenido);
+          var jsonFormatted = JSON.stringify(json, null, 2);
+          $('#contenidoJson').text(jsonFormatted);
+        };
+        reader.readAsText(file);
+      });
+    });
+  </script>
+</body>
+</html>

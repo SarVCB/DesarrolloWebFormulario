@@ -1,0 +1,9 @@
+{
+  "tipo": "paciente",
+  "nombre": "paciente",
+  "apellido": "a",
+  "cedula": "123",
+  "correo": "correo@correo",
+  "consultorio": "",
+  "especialidad": "Cardiología"
+}
